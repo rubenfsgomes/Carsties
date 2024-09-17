@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./nav/navbar";
+import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata = {
   title: "Carsties",
@@ -8,12 +9,13 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
+        <ToasterProvider />
         <Navbar />
         <main className="container mx-auto px-5 pt-10">{children}</main>
       </body>
