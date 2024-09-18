@@ -1,12 +1,20 @@
-﻿using Contracts;
-using MassTransit;
-using MongoDB.Entities;
-using SearchService.Models;
-
-namespace SearchService.Consumers
+﻿namespace SearchService.Consumers
 {
+    using Contracts;
+    using MassTransit;
+    using MongoDB.Entities;
+    using SearchService.Models;
+
+    /// <summary>
+    /// Defines the <see cref="BidPlacedConsumer" />
+    /// </summary>
     public class BidPlacedConsumer : IConsumer<BidPlaced>
     {
+        /// <summary>
+        /// The Consume
+        /// </summary>
+        /// <param name="context">The context<see cref="ConsumeContext{BidPlaced}"/></param>
+        /// <returns>The <see cref="Task"/></returns>
         public async Task Consume(ConsumeContext<BidPlaced> context)
         {
             Console.WriteLine("--> Consuming bid placed");

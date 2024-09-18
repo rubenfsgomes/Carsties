@@ -2,7 +2,6 @@
 using MongoDB.Entities;
 using SearchService.Models;
 using SearchService.Services;
-using System.Text.Json;
 
 namespace SearchService.Data;
 
